@@ -1,10 +1,10 @@
 import router from "../router"
 
-import { FirebaseApp } from './useFirebase'
+import { firebaseApp } from './useFirebase'
 import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import { useAuth as firebaseAuth } from '@vueuse/firebase/useAuth'
 
-const auth = getAuth(FirebaseApp)
+const auth = getAuth(firebaseApp)
 
 const { isAuthenticated, user } = firebaseAuth(auth)
 
